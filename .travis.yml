@@ -5,6 +5,4 @@ script:
   - wrangler publish
 install: ./install-dependencies.sh
 env:
-  - DB=postgres
-  - SH=bash
   - PACKAGE_VERSION="1.0.*"
