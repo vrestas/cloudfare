@@ -1,0 +1,20 @@
+name = "my-app"
+type = "javascript"
+zone_id = ""
+account_id = "c562df9070bcec00181f4f8f80cefafd"
+route = ""
+workers_dev = true
+compatibility_date = "2021-11-13"
+kv-namespaces = [ 
+  { binding = "TODO", id = "b0ce9876326a489ab41529ce95773d75",preview_id = "b0ce9876326a489ab41529ce95773d75" }
+]
+
+[triggers]
+crons = [ "*/10 * * * *" ]
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
+
+
