@@ -2,7 +2,6 @@ export async function handleRequest(): Promise<Response> {
 
  const ethPrice= await TODO.get('ETH',{cacheTtl: 3600})
  const btbPrice=await TODO.get('BNB',{cacheTtl: 3600})
- console.log('aa')
   return new Response(JSON.stringify({
     eth:ethPrice,
     btb:btbPrice
