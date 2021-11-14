@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - '12'
-script:
-  - wrangler publish
+  - 12
+
+cache: yarn
 install: ./install-dependencies.sh
 env:
   - PACKAGE_VERSION="1.0.*"
+script:
+  - wrangler publish
