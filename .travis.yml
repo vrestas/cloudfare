@@ -1,8 +1,12 @@
 language: node_js
 node_js:
-  - '12'
-install: yarn
+  - 12
+
+install:
+  - yarn global add @cloudflare/wrangler
+  - yarn
 cache: yarn
+
 env:
   - PACKAGE_VERSION="1.0.*"
 script:
