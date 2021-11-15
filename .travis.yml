@@ -10,4 +10,4 @@ cache: yarn
 env:
   - PACKAGE_VERSION="1.0.*"
 script:
-  - wrangler publish
+  - CF_ACCOUNT_ID=c562df9070bcec00181f4f8f80cefafd CF_API_TOKEN=veryLongAPIToken wrangler publish
