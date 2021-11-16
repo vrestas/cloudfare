@@ -2605,6 +2605,11 @@
   dependencies:
     "minimist" "^1.2.5"
 
+"jsonschema@^1.4.0":
+  "integrity" "sha1-Gvo0xLwiGQ2OQicewXrIs0BPh7I="
+  "resolved" "https://registry.npm.taobao.org/jsonschema/download/jsonschema-1.4.0.tgz"
+  "version" "1.4.0"
+
 "kind-of@^6.0.2":
   "integrity" "sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw=="
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"

@@ -24,6 +24,7 @@ export async function eventTrigger():Promise<void>{
   if(validate(responseJson)){
     const ethPrice=responseJson.data[1027].quote.USDT.price
     const btbPrice=responseJson.data[1839].quote.USDT.price
+
     await TODO.put('ETH', ethPrice.toString())
     await TODO.put('BNB', btbPrice.toString())
   }else{
