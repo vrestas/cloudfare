@@ -1,0 +1,220 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+      "Welcome": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "status": {
+                  "$ref": "#/definitions/Status"
+              },
+              "data": {
+                  "type": "object",
+                  "additionalProperties": {
+                      "$ref": "#/definitions/Datum"
+                  }
+              }
+          },
+          "required": [
+              "data",
+              "status"
+          ],
+          "title": "Welcome"
+      },
+      "Datum": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "id": {
+                  "type": "integer"
+              },
+              "name": {
+                  "type": "string"
+              },
+              "symbol": {
+                  "type": "string"
+              },
+              "slug": {
+                  "type": "string"
+              },
+              "num_market_pairs": {
+                  "type": "integer"
+              },
+              "date_added": {
+                  "type": "string",
+                  "format": "date-time"
+              },
+              "tags": {
+                  "type": "array",
+                  "items": {
+                      "type": "string"
+                  }
+              },
+              "max_supply": {
+                  "anyOf": [
+                      {
+                          "type": "integer"
+                      },
+                      {
+                          "type": "null"
+                      }
+                  ]
+              },
+              "circulating_supply": {
+                  "type": "number"
+              },
+              "total_supply": {
+                  "type": "number"
+              },
+              "is_active": {
+                  "type": "integer"
+              },
+              "platform": {
+                  "type": "null"
+              },
+              "cmc_rank": {
+                  "type": "integer"
+              },
+              "is_fiat": {
+                  "type": "integer"
+              },
+              "last_updated": {
+                  "type": "string",
+                  "format": "date-time"
+              },
+              "quote": {
+                  "$ref": "#/definitions/Quote"
+              }
+          },
+          "required": [
+              "circulating_supply",
+              "cmc_rank",
+              "date_added",
+              "id",
+              "is_active",
+              "is_fiat",
+              "last_updated",
+              "max_supply",
+              "name",
+              "num_market_pairs",
+              "platform",
+              "quote",
+              "slug",
+              "symbol",
+              "tags",
+              "total_supply"
+          ],
+          "title": "Datum"
+      },
+      "Quote": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "USDT": {
+                  "$ref": "#/definitions/Usdt"
+              }
+          },
+          "required": [
+              "USDT"
+          ],
+          "title": "Quote"
+      },
+      "Usdt": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "price": {
+                  "type": "number"
+              },
+              "volume_24h": {
+                  "type": "number"
+              },
+              "volume_change_24h": {
+                  "type": "number"
+              },
+              "percent_change_1h": {
+                  "type": "number"
+              },
+              "percent_change_24h": {
+                  "type": "number"
+              },
+              "percent_change_7d": {
+                  "type": "number"
+              },
+              "percent_change_30d": {
+                  "type": "number"
+              },
+              "percent_change_60d": {
+                  "type": "number"
+              },
+              "percent_change_90d": {
+                  "type": "number"
+              },
+              "market_cap": {
+                  "type": "number"
+              },
+              "market_cap_dominance": {
+                  "type": "number"
+              },
+              "fully_diluted_market_cap": {
+                  "type": "number"
+              },
+              "last_updated": {
+                  "type": "string",
+                  "format": "date-time"
+              }
+          },
+          "required": [
+              "fully_diluted_market_cap",
+              "last_updated",
+              "market_cap",
+              "market_cap_dominance",
+              "percent_change_1h",
+              "percent_change_24h",
+              "percent_change_30d",
+              "percent_change_60d",
+              "percent_change_7d",
+              "percent_change_90d",
+              "price",
+              "volume_24h",
+              "volume_change_24h"
+          ],
+          "title": "Usdt"
+      },
+      "Status": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "timestamp": {
+                  "type": "string",
+                  "format": "date-time"
+              },
+              "error_code": {
+                  "type": "integer"
+              },
+              "error_message": {
+                  "type": "null"
+              },
+              "elapsed": {
+                  "type": "integer"
+              },
+              "credit_count": {
+                  "type": "integer"
+              },
+              "notice": {
+                  "type": "null"
+              }
+          },
+          "required": [
+              "credit_count",
+              "elapsed",
+              "error_code",
+              "error_message",
+              "notice",
+              "timestamp"
+          ],
+          "title": "Status"
+      }
+  }
+}
