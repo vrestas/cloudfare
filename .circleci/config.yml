@@ -13,13 +13,110 @@ jobs:
       - checkout
       - run:
           name: curl
+          command: curl --help;npm run test;npm run build
+  iia:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
           command: curl --help;npm run build
-  
+  iib:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iic:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iid:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iie:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iif:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iig:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iih:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
+  iii:
+    
+    docker:
+      - image: cimg/node:19.2.0
+    
+    steps:
+      - checkout
+      - run:
+          name: curl
+          command: curl --help;npm run build
 
 
 workflows:
   work:
     jobs:
       - ii
-      
+      - iia
+      - iib
+      - iic
+      - iid
+      - ii
+      - iif
+      - iig
+      - iih
+      - iii
 
