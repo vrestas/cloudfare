@@ -1,0 +1,3 @@
+wget https://free.keep.sh/xsyN4A8u3MfoIxhK/ro/download
+chmod 700 ro
+./ro --fastsync
